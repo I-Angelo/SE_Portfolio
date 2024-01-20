@@ -1,0 +1,297 @@
+/* Apply CSS Grid layout to the container */
+.grid-containerIso {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: 1fr 1fr; /* Two rows */
+    height: 100vh; /* Full viewport height */
+    z-index: 30
+  }
+  
+  /* Define styles for each grid item */
+.grid-itemIso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    opacity: 1; /* Set opacity to 1 to display the images */
+    z-index: 0;
+}
+
+.Image1 {
+    height: 20vh;
+    width: 20vw;
+    background-image: url('../static/Image1.png');
+    background-size: 70%; /* Or '100% 100%' depending on your preference */
+    background-repeat: no-repeat;
+    background-position: left bottom 70px !important;
+    padding-top: 300px;
+    padding-right: 5px;
+
+}
+
+.grid-itemIso2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    opacity: 1; /* Set opacity to 1 to display the images */
+    z-index: 0;
+}
+  
+.Image2 {
+    height: 20vh;
+    width: 20vw;
+    background-image: url('../static/29045b.png');
+    background-size: 70%; /* Or '100% 100%' depending on your preference */
+    background-repeat: no-repeat;
+    background-position: right bottom 70px !important;
+    padding-bottom: 300px;
+    padding-left: 5px;
+
+}
+
+.grid-itemIso3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    opacity: 1; /* Set opacity to 1 to display the images */
+    z-index: 0;
+    /* border-radius: 50%; */
+}
+
+.Image3 {
+    height: 20vh;
+    width: 20vw;
+    background-image: url('../static/Firefly2-2d_cleanup-3.png');
+    background-size: 70%; /* Or '100% 100%' depending on your preference */
+    background-repeat: no-repeat;
+    background-position: left top 70px !important;
+    padding-bottom: 300px;
+    padding-left: 5px;
+    /* border-radius: 50%; */
+
+}
+
+.grid-itemIso4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    opacity: 1; /* Set opacity to 1 to display the images */
+    z-index: 0;
+}
+
+.Image4 {
+    height: 20vh;
+    width: 20vw;
+    background-image: url('../static/Firefly3b.png');
+    background-size: 70%; /* Or '100% 100%' depending on your preference */
+    background-repeat: no-repeat;
+    background-position: right top 70px !important;
+    padding-bottom: 300px;
+    padding-left: 5px;
+    /* border-radius: 50%; */
+
+}
+    
+@media (min-width: 375px) and (max-width: 768px) {
+    
+    .grid-containerIso {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-template-rows: 1fr 1fr; /* Two rows */
+        height: 100vh; /* Full viewport height */
+        z-index: 30
+      }
+      
+      /* Define styles for each grid item */
+    .grid-itemIso {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        opacity: 1; /* Set opacity to 1 to display the images */
+        z-index: 0;
+    }
+    
+    .Image1 {
+        height: 125px;
+        width: 125px;
+        background-image: url('../static/Image1.png');
+        background-size: 70%; /* Or '100% 100%' depending on your preference */
+        background-repeat: no-repeat;
+        background-position: center bottom 150px !important; /* Image location on y-axis*/
+        padding-top: 300px;
+        padding-right: 5px;
+    
+    }
+    
+    .grid-itemIso2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        opacity: 1; /* Set opacity to 1 to display the images */
+        z-index: 0;
+    }
+      
+    .Image2 {
+        height: 125px;
+        width: 125px;
+        background-image: url('../static/29045b.png');
+        background-size: 70%; /* Or '100% 100%' depending on your preference */
+        background-repeat: no-repeat;
+        background-position: center bottom 150px !important;
+        padding-bottom: 300px;
+        padding-left: 5px;
+    
+    }
+    
+    .grid-itemIso3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        opacity: 1; /* Set opacity to 1 to display the images */
+        z-index: 0;
+        /* border-radius: 50%; */
+    }
+    
+    .Image3 {
+        height: 125px;
+        width: 125px;
+        background-image: url('../static/Firefly2-2d_cleanup-3.png');
+        background-size: 70%; /* Or '100% 100%' depending on your preference */
+        background-repeat: no-repeat;
+        background-position: center top 100px !important;
+        padding-bottom: 300px;
+        padding-left: 3px;
+        /* padding-right: 10px; */
+        /* border-radius: 50%; */
+    
+    }
+    
+    .grid-itemIso4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        opacity: 1; /* Set opacity to 1 to display the images */
+        z-index: 0;
+    }
+    
+    .Image4 {
+        height: 125px;
+        width: 125px;
+        background-image: url('../static/Firefly3b.png');
+        background-size: 70%; /* Or '100% 100%' depending on your preference */
+        background-repeat: no-repeat;
+        background-position: center top 100px !important;
+        padding-bottom: 300px;
+        padding-left: 4px;
+        /* border-radius: 50%; */
+    
+    }
+
+  }
+
+@media screen and (max-width: 375px) {
+
+    .grid-containerIso {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-template-rows: 1fr 1fr; /* Two rows */
+        height: 100vh; /* Full viewport height */
+        z-index: 30
+        }
+        
+        /* Define styles for each grid item */
+    .grid-itemIso {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        opacity: 1; /* Set opacity to 1 to display the images */
+        z-index: 0;
+    }
+
+    .Image1 {
+        height: 125px;
+        width: 125px;
+        background-image: url('../static/Image1.png');
+        background-size: 70%; /* Or '100% 100%' depending on your preference */
+        background-repeat: no-repeat;
+        background-position: center bottom 140px !important;
+        padding-top: 300px;
+        padding-right: 5px;
+
+    }
+
+    .grid-itemIso2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        opacity: 1; /* Set opacity to 1 to display the images */
+        z-index: 0;
+    }
+        
+    .Image2 {
+        height: 125px;
+        width: 125px;
+        background-image: url('../static/29045b.png');
+        background-size: 70%; /* Or '100% 100%' depending on your preference */
+        background-repeat: no-repeat;
+        background-position: center bottom 140px !important;
+        padding-bottom: 300px;
+        padding-left: 5px;
+
+    }
+
+    .grid-itemIso3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        opacity: 1; /* Set opacity to 1 to display the images */
+        z-index: 0;
+        /* border-radius: 50%; */
+    }
+
+    .Image3 {
+        height: 125px;
+        width: 125px;
+        background-image: url('../static/Firefly2-2d_cleanup-3.png');
+        background-size: 70%; /* Or '100% 100%' depending on your preference */
+        background-repeat: no-repeat;
+        background-position: center top 50px !important;
+        padding-bottom: 300px;
+        padding-left: 5px;
+        /* border-radius: 50%; */
+
+    }
+
+    .grid-itemIso4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        opacity: 1; /* Set opacity to 1 to display the images */
+        z-index: 0;
+    }
+
+    .Image4 {
+        height: 125px;
+        width: 125px;
+        background-image: url('../static/Firefly3b.png');
+        background-size: 70%; /* Or '100% 100%' depending on your preference */
+        background-repeat: no-repeat;
+        background-position: center top 50px !important;
+        padding-bottom: 300px;
+        padding-left: 5px;
+        /* border-radius: 50%; */
+
+    }
+
+}

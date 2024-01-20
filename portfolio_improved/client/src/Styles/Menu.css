@@ -1,0 +1,1709 @@
+/* Menu.css */
+
+body {
+    overflow: hidden !important;
+}
+
+
+.menu {
+    position: fixed;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto; /* centers tessarect in the center of the pager*/
+    width: 150px ;
+    height: 150px ;
+}
+/* make image pulsate */
+.pulsate-menu-image {
+    animation: pulse 2s infinite; /* Adjust the duration as needed */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
+/* log in menu for myself (lock)*/
+
+/* This was moved to the correct css file loginToggle.css */
+
+/* welcome sign */
+  
+  @keyframes fadeInAndMove {
+    0% {
+        opacity: 0;
+        margin-top: 50vh; /* Adjust this value to half of the element's height */
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50%;
+        margin-top: -2px; /* Adjust this value based on your design */
+    }
+}
+  
+
+/* Toggler */
+
+.menu-toggler {
+    position: fixed;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu-toggler:hover + label,
+.menu-toggler:hover + label:before,
+.menu-toggler:hover + label:after {
+    background: rgb(36, 149, 159);
+}
+
+.menu-toggler:checked + label {
+    background: transparent;
+}
+
+.menu-toggler:checked + label:before,
+.menu-toggler:checked + label:after {
+    top: 0;
+    width: 40px;
+    transform-origin: 50% 50%;
+}
+
+.menu-toggler:checked + label:before {
+    transform: rotate(45deg) translateY(-15px) translateX(-15px);
+}
+
+.menu-toggler:checked + label:after {
+    transform: rotate(-45deg);
+}
+
+.menu-toggler:checked ~ ul .menu-item { 
+    opacity: 1;
+}
+/* translateY determines the distance between the toggle button and menu */
+.menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+    transform: rotate(0deg) translateY(-150px) translateX(0);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+    transform: rotate(51.428571deg) translateY(-150px) translateX(0);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+    transform: rotate(102.85714deg) translateY(-150px) translateX(0);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+    transform: rotate(154.285713deg) translateY(-150px) translateX(0);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+    transform: rotate(205.714284deg) translateY(-150px) translateX(0);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+    transform: rotate(257.142855deg) translateY(-150px) translateX(0);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(7) {
+    transform: rotate(308.571426deg) translateY(-150px) translateX(0);
+}
+
+.menu-toggler:checked ~ ul .menu-item a {
+    pointer-events: auto;
+}
+
+
+.menu-toggler + label {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background: rgba(169, 69, 25, 0.9);
+    transition: transform 0.5s top 0.5s;
+    position: fixed;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.menu-toggler + label:before,
+.menu-toggler + label:after {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background: rgba(129, 29, 29, 0.7);
+    transition: transform 0.5s top 0.5s;
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+}
+
+.menu-toggler + label:before {
+    top: 10px;
+}
+
+.menu-toggler + label:after {
+    top: -10px;
+}
+
+
+/* location open items on the screen */
+.menu-item {
+    position: fixed;
+    display: flex; /*Center content horizontally*/
+    justify-content: center; /* Center content horizontally */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: 0.5s;
+    transform-origin: center;
+    transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
+
+}
+
+
+.menu-item.open {
+    opacity: 1;
+    animation: spin-out 0.5s ease, bounce 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.menu.open li {
+    transform: rotateY(-15deg);
+    transition: transform 0.5s; /* Add a transition for smooth rotation */
+}
+
+/* CIRCLES SIZE - color */
+
+.menu-item a.menu-item-index {
+    display: block;
+    width: 125px; /* Here is determined the size of the circles in the menu items up to 200px everywhere else in the css files*/
+    height: 125px;
+    line-height: 40px; /* Space between two sentences in the circle menu item*/
+    color: rgba(255, 255, 255, 0.7);
+    background: rgb(21, 35, 41);
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    pointer-events: none;
+    transition: 0.2s;
+
+    
+    /* Center the content horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 4px 4px 8px rgba(24, 33, 132, 0.5); /* Adjust the values to control the shadow effect */
+    
+}
+
+  
+  .rotate {
+    transform: perspective(1000px) rotateY(720deg);
+  }
+  
+
+  /* CSS for the spinning effect */
+
+/* Styles for the initial horizontal orientation (text)  */
+.menu-item .about {
+    transform: rotate(0); /* Change as per your required rotation */
+  }
+  
+.menu-item .github {
+transform: rotate(-51.428571deg); /* Change as per your required rotation */
+}
+
+.menu-item .linkedin {
+    transform: rotate(-102.85714deg); /* Change as per your required rotation */
+    }
+
+.menu-item .certifications {
+    transform: rotate(-154.285713deg); /* Change as per your required rotation */
+}
+    
+.menu-item .projects {
+    transform: rotate(-205.714284deg); /* Change as per your required rotation */
+    }
+
+.menu-item .contact {
+    transform: rotate(-257.142855deg); /* Change as per your required rotation */
+    }
+
+.menu-item .resume {
+    transform: rotate(-308.571426deg); /* Change as per your required rotation */
+    }
+
+  
+  /* Styles for spinning effect on click */
+  .rotate {
+    transition: transform 0.5s;
+  }
+  
+  .menu-item .rotate {
+    transform: rotateY(1440deg);
+  }
+  
+  /* Additional classes for spinning effect on each menu item */
+  .about.rotate {
+    transform: rotate(0) rotateY(1440deg);
+  }
+  
+  .github.rotate {
+    transform: rotate(-51.428571deg) rotateY(1440deg);
+  }
+
+  .linkedin.rotate {
+    transform: rotate(-102.85714deg) rotateY(1440deg);
+  }
+
+  .certifications.rotate {
+    transform: rotate(-154.285713deg) rotateY(1440deg);
+  }
+
+  .projects.rotate {
+    transform: rotate(-205.714284deg) rotateY(1440deg);
+  }
+
+  .contact.rotate {
+    transform: rotate(-257.142855deg) rotateY(1440deg);
+  }
+
+  .resume.rotate {
+    transform: rotate(-308.571426deg) rotateY(1440deg);
+  }
+
+  
+  
+
+.menu-item a span {
+    transform: none;
+}
+
+/* Shadow */
+a {
+    -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(0,0,0,.1));
+    font-size: 20px;
+    z-index: -20 !important;
+  }
+
+
+
+.menu-item a:hover {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 30px;
+    text-shadow: 4px 4px 8px rgba(95, 14, 34, 0.5);
+}
+
+.menu-item .unique a:hover {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+}
+
+.tesseract-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Style the Tesseract image */
+.tesseract-image img {
+    max-width: 100%; /* Make the image 80% smaller */
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+}
+
+.reset-rotation {
+    transform: rotateY(0deg); /*Reset rotation on the Y-axis*/
+    transform-origin: center;
+    transition: transform 0.5s ease; /* Add a transition for smooth rotation */
+  }
+
+.parent {
+    margin-top: 75px;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    background: transparent;
+}
+
+.welcome {
+    text-align: center;
+    /* color: rgb(47, 119, 164); */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust the shadow values as needed */
+    font-size: 40px;
+}
+
+/* screens upt 768px */
+
+@media (min-width: 375px) and (max-width: 768px)  {
+    /* Styles for smaller screens (e.g., mobile devices) */
+    .menu-toggler {
+      width: 30px; /* Reduce the width for the menu-toggler */
+      height: 30px; /* Reduce the height for the menu-toggler */
+    }
+  
+    .menu-toggler:checked ~ ul .menu-item {
+      width: 15vw; /* Reduce the width of menu items */
+      height: 15vh; /* Reduce the height of menu items */
+    }
+
+    .pulsate-menu-image {
+        animation: pulse 2s infinite; /* Adjust the duration as needed */
+      }
+      
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+    
+
+  
+    /* translateY(-80) is the distance from the center */
+  
+    .menu-item a.menu-item-index {
+      width: 75px; /* Reduce the width of menu item circles */
+      height: 75px; /* Reduce the height of menu item circles */
+      font-size: 8px; /* Reduce the font size for menu item text */
+    }
+    .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+        transform: rotate(0deg) translateY(-80px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+        transform: rotate(51.428571deg) translateY(-80px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+        transform: rotate(102.85714deg) translateY(-80px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+        transform: rotate(154.285713deg) translateY(-80px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+        transform: rotate(205.714284deg) translateY(-80px) translateX(0);
+    }
+    .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+        transform: rotate(257.142855deg) translateY(-90px) translateX(0);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(7) {
+        transform: rotate(308.571426deg) translateY(-80px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item a {
+        pointer-events: auto;
+    }
+
+    /* Rotation of content to become horicontal */
+
+    .menu-item:nth-child(2) a {
+        transform: rotate(-51.428571deg) ;
+    }
+
+    .menu-item:nth-child(3) a {
+        transform: rotate(-102.85714deg) ;
+
+    }.menu-item:nth-child(4) a {
+        transform: rotate(-154.285713deg) ;
+    }
+
+    .menu-item:nth-child(5) a {
+        transform: rotate(-205.714284deg) ;
+        /* z-index: 1; */
+    }
+
+    .menu-item:nth-child(6) a {
+        transform: rotate(-257.142855deg) ;
+        /* filter: saturate(200%); */
+    }
+
+    .menu-item:nth-child(7) a {
+        transform: rotate(-308.571426deg) ;
+        /* filter: saturate(200%); */
+    }
+
+    /* spinning */
+
+    .menu-item .about {
+        transform: rotate(0); /* Change as per your required rotation */
+      }
+      
+    .menu-item .github {
+    transform: rotate(-51.428571deg); /* Change as per your required rotation */
+    }
+    
+    .menu-item .linkedin {
+        transform: rotate(-102.85714deg); /* Change as per your required rotation */
+        }
+    
+    .menu-item .certifications {
+        transform: rotate(-154.285713deg); /* Change as per your required rotation */
+    }
+        
+    .menu-item .projects {
+        transform: rotate(-205.714284deg); /* Change as per your required rotation */
+        }
+    
+    .menu-item .contact {
+        transform: rotate(-257.142855deg); /* Change as per your required rotation */
+        }
+    
+    .menu-item .resume {
+        transform: rotate(-308.571426deg); /* Change as per your required rotation */
+        }
+    
+      
+      /* Styles for spinning effect on click */
+
+      .rotate {
+        transform: perspective(1000px) rotateY(720deg);
+      }
+      .rotate {
+        transition: transform 0.5s;
+      }
+      
+      .menu-item .rotate {
+        transform: rotateY(360deg);
+      }
+      
+      /* Additional classes for spinning effect on each menu item */
+      .about.rotate {
+        transform: rotate(0) rotateY(360deg);
+      }
+      
+      .github.rotate {
+        transform: rotate(-51.428571deg) rotateY(360deg);
+      }
+    
+      .linkedin.rotate {
+        transform: rotate(-102.85714deg) rotateY(360deg);
+      }
+    
+      .certifications.rotate {
+        transform: rotate(-154.285713deg) rotateY(360deg);
+      }
+    
+      .projects.rotate {
+        transform: rotate(-205.714284deg) rotateY(360deg);
+      }
+    
+      .contact.rotate {
+        transform: rotate(-257.142855deg) rotateY(360deg);
+      }
+    
+      .resume.rotate {
+        transform: rotate(-308.571426deg) rotateY(360deg);
+      }
+    
+
+    .menu  {
+        position: absolute ;
+        display: flex ;
+        justify-content: center ;
+        margin: auto;
+        width: 20vw ;
+        height: 11vh ;
+        padding-bottom: 65px; /* */
+        
+    }
+    /* postion of the toggler */
+    .menu-toggler {
+        padding-top: 0px;
+        /* position: sticky; */
+    }
+    /* toggle position clickable*/
+    #menu-toggler {
+        position: absolute;
+        margin-top: 50px; /*. position of the transparent toggler */
+        width: 50px;
+        height: 50px;
+    }
+
+    /* location of the menu items open in relation on the screen Y AXIS */
+
+    .menu-item {
+        position: fixed;
+        display: flex; /*Center content horizontally*/
+        justify-content: center; /* Center content horizontally */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+        transition: 0.5s;
+        transform-origin: center;
+        bottom: 60px; /*. to move the menu itmes open down on Y axis*/
+        transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
+
+    }
+
+    .body {
+        overflow: hidden;
+    }
+
+
+  }
+
+/* smaller screens */
+
+@media screen and (max-width: 375px) {
+    /* Styles for smaller screens (e.g., mobile devices) */
+    .menu-toggler {
+        width: 2vw; /* Reduce the width for the menu-toggler */
+        height: 2vh; /* Reduce the height for the menu-toggler */
+    }
+
+    .menu-toggler:checked ~ ul .menu-item {
+        width: 15vw; /* Reduce the width of menu items */
+        height: 15vh; /* Reduce the height of menu items */
+    }
+
+
+    /* translateY(-80) is the distance from the center */
+
+    .menu-item a.menu-item-index {
+        width: 75px; /* Reduce the width of menu item circles */
+        height: 75px; /* Reduce the height of menu item circles */
+        font-size: 8px; /* Reduce the font size for menu item text */
+    }
+    .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+        transform: rotate(0deg) translateY(-60px) translateX(0);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+        transform: rotate(51.428571deg) translateY(-60px) translateX(0);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+        transform: rotate(102.85714deg) translateY(-60px) translateX(0);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+        transform: rotate(154.285713deg) translateY(-60px) translateX(0);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+        transform: rotate(205.714284deg) translateY(-60px) translateX(0);
+    }
+    .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+        transform: rotate(257.142855deg) translateY(-60px) translateX(0);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(7) {
+        transform: rotate(308.571426deg) translateY(-60px) translateX(0);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item a {
+        pointer-events: auto;
+    }
+
+    /* Rotation of content to become horicontal */
+
+    .menu-item:nth-child(2) a {
+        transform: rotate(-51.428571deg) ;
+    }
+
+    .menu-item:nth-child(3) a {
+        transform: rotate(-102.85714deg) ;
+
+    }.menu-item:nth-child(4) a {
+        transform: rotate(-154.285713deg) ;
+    }
+
+    .menu-item:nth-child(5) a {
+        transform: rotate(-205.714284deg) ;
+        /* z-index: 1; */
+    }
+
+    .menu-item:nth-child(6) a {
+        transform: rotate(-257.142855deg) ;
+        /* filter: saturate(200%); */
+    }
+
+    .menu-item:nth-child(7) a {
+        transform: rotate(-308.571426deg) ;
+        /* filter: saturate(200%); */
+    }
+
+    /* spinning */
+
+    .menu-item .about {
+        transform: rotate(0); /* Change as per your required rotation */
+        }
+        
+    .menu-item .github {
+    transform: rotate(-51.428571deg); /* Change as per your required rotation */
+    }
+
+    .menu-item .linkedin {
+        transform: rotate(-102.85714deg); /* Change as per your required rotation */
+        }
+
+    .menu-item .certifications {
+        transform: rotate(-154.285713deg); /* Change as per your required rotation */
+    }
+        
+    .menu-item .projects {
+        transform: rotate(-205.714284deg); /* Change as per your required rotation */
+        }
+
+    .menu-item .contact {
+        transform: rotate(-257.142855deg); /* Change as per your required rotation */
+        }
+
+    .menu-item .resume {
+        transform: rotate(-308.571426deg); /* Change as per your required rotation */
+        }
+
+        
+        /* Styles for spinning effect on click */
+
+        .rotate {
+        transform: perspective(1000px) rotateY(720deg);
+        }
+        .rotate {
+        transition: transform 0.5s;
+        }
+        
+        .menu-item .rotate {
+        transform: rotateY(360deg);
+        }
+        
+        /* Additional classes for spinning effect on each menu item */
+        .about.rotate {
+        transform: rotate(0) rotateY(360deg);
+        }
+        
+        .github.rotate {
+        transform: rotate(-51.428571deg) rotateY(360deg);
+        }
+
+        .linkedin.rotate {
+        transform: rotate(-102.85714deg) rotateY(360deg);
+        }
+
+        .certifications.rotate {
+        transform: rotate(-154.285713deg) rotateY(360deg);
+        }
+
+        .projects.rotate {
+        transform: rotate(-205.714284deg) rotateY(360deg);
+        }
+
+        .contact.rotate {
+        transform: rotate(-257.142855deg) rotateY(360deg);
+        }
+
+        .resume.rotate {
+        transform: rotate(-308.571426deg) rotateY(360deg);
+        }
+
+
+    .menu  {
+        position: absolute ;
+        display: flex ;
+        justify-content: center ;
+        margin: auto;
+        width: 20vw ;
+        height: 11vh ;
+        padding-bottom: 70px; /* this has to match with the .menu-toggler*/
+        
+    }
+    /* postion of the toggler */
+    .menu-toggler {
+        padding-bottom: 100px;
+        /* position: sticky; */
+    }
+    /* toggle position clickable*/
+    #menu-toggler {
+        position: absolute;
+        margin-bottom: 100px;
+        width: 50px;
+        height: 50px;
+    }
+
+    /* location of the menu items open in relation on the screen */
+
+    .menu-item {
+        position: fixed;
+        display: flex; /*Center content horizontally*/
+        justify-content: center; /* Center content horizontally */
+        top: 0;
+        /* bottom: 0; */
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+        transition: 0.5s;
+        transform-origin: center;
+        bottom: 60px; /*. to move the menu itmes open down on Y axis*/
+        transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
+
+    }
+
+    .menu-item a.menu-item-index {
+        display: block;
+        width: 60px; /* Here is determined the size of the circles in the menu items up to 200px everywhere else in the css files*/
+        height: 60px;
+        line-height: 40px; /* Space between two sentences in the circle menu item*/
+        color: rgba(255, 255, 255, 0.7);
+        background: rgb(21, 35, 41);
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        font-size: 10px;
+        pointer-events: none;
+        transition: 0.2s;
+
+        
+        /* Center the content horizontally */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 4px 4px 8px rgba(24, 33, 132, 0.5); /* Adjust the values to control the shadow effect */
+        
+    }
+
+
+
+    .body {
+        overflow: hidden;
+    }
+
+
+}
+
+@media (max-width: 374px) and (max-height: 667px){
+
+/* Styles for smaller screens (e.g., mobile devices) */
+.menu-toggler {
+    width: 20px; /* Reduce the width for the menu-toggler */
+    height: 20px; /* Reduce the height for the menu-toggler */
+    }
+
+    .menu-toggler:checked ~ ul .menu-item {
+    width: 150px; /* Reduce the width of menu items */
+    height: 150px; /* Reduce the height of menu items */
+    }
+
+
+    /* translateY(-80) is the distance from the center */
+
+    .menu-item a.menu-item-index {
+    width: 75px; /* Reduce the width of menu item circles */
+    height: 75px; /* Reduce the height of menu item circles */
+    font-size: 8px; /* Reduce the font size for menu item text */
+    }
+    .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+        transform: rotate(0deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+        transform: rotate(51.428571deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+        transform: rotate(102.85714deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+        transform: rotate(154.285713deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+        transform: rotate(205.714284deg) translateY(-40px) translateX(0);
+    }
+    .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+        transform: rotate(257.142855deg) translateY(-40px) translateX(0);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(7) {
+        transform: rotate(308.571426deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item a {
+        pointer-events: auto;
+    }
+
+    /* Rotation of content to become horicontal */
+
+    .menu-item:nth-child(2) a {
+        transform: rotate(-51.428571deg) ;
+    }
+
+    .menu-item:nth-child(3) a {
+        transform: rotate(-102.85714deg) ;
+
+    }.menu-item:nth-child(4) a {
+        transform: rotate(-154.285713deg) ;
+    }
+
+    .menu-item:nth-child(5) a {
+        transform: rotate(-205.714284deg) ;
+        /* z-index: 1; */
+    }
+
+    .menu-item:nth-child(6) a {
+        transform: rotate(-257.142855deg) ;
+        /* filter: saturate(200%); */
+    }
+
+    .menu-item:nth-child(7) a {
+        transform: rotate(-308.571426deg) ;
+        /* filter: saturate(200%); */
+    }
+
+    /* spinning */
+
+    .menu-item .about {
+        transform: rotate(0); /* Change as per your required rotation */
+    }
+    
+    .menu-item .github {
+    transform: rotate(-51.428571deg); /* Change as per your required rotation */
+    }
+    
+    .menu-item .linkedin {
+        transform: rotate(-102.85714deg); /* Change as per your required rotation */
+        }
+    
+    .menu-item .certifications {
+        transform: rotate(-154.285713deg); /* Change as per your required rotation */
+    }
+        
+    .menu-item .projects {
+        transform: rotate(-205.714284deg); /* Change as per your required rotation */
+        }
+    
+    .menu-item .contact {
+        transform: rotate(-257.142855deg); /* Change as per your required rotation */
+        }
+    
+    .menu-item .resume {
+        transform: rotate(-308.571426deg); /* Change as per your required rotation */
+        }
+    
+    
+    /* Styles for spinning effect on click */
+
+    .rotate {
+        transform: perspective(1000px) rotateY(720deg);
+    }
+    .rotate {
+        transition: transform 0.5s;
+    }
+    
+    .menu-item .rotate {
+        transform: rotateY(360deg);
+    }
+    
+    /* Additional classes for spinning effect on each menu item */
+    .about.rotate {
+        transform: rotate(0) rotateY(360deg);
+    }
+    
+    .github.rotate {
+        transform: rotate(-51.428571deg) rotateY(360deg);
+    }
+    
+    .linkedin.rotate {
+        transform: rotate(-102.85714deg) rotateY(360deg);
+    }
+    
+    .certifications.rotate {
+        transform: rotate(-154.285713deg) rotateY(360deg);
+    }
+    
+    .projects.rotate {
+        transform: rotate(-205.714284deg) rotateY(360deg);
+    }
+    
+    .contact.rotate {
+        transform: rotate(-257.142855deg) rotateY(360deg);
+    }
+    
+    .resume.rotate {
+        transform: rotate(-308.571426deg) rotateY(360deg);
+    }
+    
+
+    .menu  {
+        position: absolute ;
+        display: flex ;
+        justify-content: center ;
+        margin: auto;
+        width: 30vw ;
+        height: 30vh ;
+        padding-top: 150px !important; /* */
+        
+    }
+    /* postion of the toggler */
+    .menu-toggler {
+        padding-bottom: 150px !important;
+        /* position: sticky; */
+    }
+    /* toggle position clickable*/
+    #menu-toggler {
+        position: absolute;
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    /* location of the menu items open in relation on the screen */
+
+    .menu-item {
+        position: fixed;
+        display: flex; /*Center content horizontally*/
+        justify-content: center; /* Center content horizontally */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 20vw;
+        height: 20vh;
+        opacity: 0;
+        transition: 0.5s;
+        transform-origin: center;
+        top: 10px; /*. to move the menu itmes open down on Y axis*/
+        transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
+
+    }
+
+    .menu-item a.menu-item-index {
+        display: block;
+        width: 60px; /* Here is determined the size of the circles in the menu items up to 200px everywhere else in the css files*/
+        height: 60px;
+        line-height: 40px; /* Space between two sentences in the circle menu item*/
+        color: rgba(255, 255, 255, 0.7);
+        background: rgb(21, 35, 41);
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        font-size: 10px;
+        pointer-events: none;
+        transition: 0.2s;
+    
+        
+        /* Center the content horizontally */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 4px 4px 8px rgba(24, 33, 132, 0.5); /* Adjust the values to control the shadow effect */
+        
+    }
+
+    
+
+    .body {
+        overflow: hidden;
+    }
+}
+
+
+@media (max-width: 374px) and (max-height: 667px){
+
+/* Styles for smaller screens (e.g., mobile devices) */
+.menu-toggler {
+    width: 20px; /* Reduce the width for the menu-toggler */
+    height: 20px; /* Reduce the height for the menu-toggler */
+    }
+
+    .menu-toggler:checked ~ ul .menu-item {
+    width: 150px; /* Reduce the width of menu items */
+    height: 150px; /* Reduce the height of menu items */
+    }
+
+
+    /* translateY(-80) is the distance from the center */
+
+    .menu-item a.menu-item-index {
+    width: 75px; /* Reduce the width of menu item circles */
+    height: 75px; /* Reduce the height of menu item circles */
+    font-size: 8px; /* Reduce the font size for menu item text */
+    }
+    .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+        transform: rotate(0deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+        transform: rotate(51.428571deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+        transform: rotate(102.85714deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+        transform: rotate(154.285713deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+        transform: rotate(205.714284deg) translateY(-40px) translateX(0);
+    }
+    .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+        transform: rotate(257.142855deg) translateY(-40px) translateX(0);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(7) {
+        transform: rotate(308.571426deg) translateY(-40px) translateX(0);
+    }
+    
+    .menu-toggler:checked ~ ul .menu-item a {
+        pointer-events: auto;
+    }
+
+    /* Rotation of content to become horicontal */
+
+    .menu-item:nth-child(2) a {
+        transform: rotate(-51.428571deg) ;
+    }
+
+    .menu-item:nth-child(3) a {
+        transform: rotate(-102.85714deg) ;
+
+    }.menu-item:nth-child(4) a {
+        transform: rotate(-154.285713deg) ;
+    }
+
+    .menu-item:nth-child(5) a {
+        transform: rotate(-205.714284deg) ;
+        /* z-index: 1; */
+    }
+
+    .menu-item:nth-child(6) a {
+        transform: rotate(-257.142855deg) ;
+        /* filter: saturate(200%); */
+    }
+
+    .menu-item:nth-child(7) a {
+        transform: rotate(-308.571426deg) ;
+        /* filter: saturate(200%); */
+    }
+
+    /* spinning */
+
+    .menu-item .about {
+        transform: rotate(0); /* Change as per your required rotation */
+    }
+    
+    .menu-item .github {
+    transform: rotate(-51.428571deg); /* Change as per your required rotation */
+    }
+    
+    .menu-item .linkedin {
+        transform: rotate(-102.85714deg); /* Change as per your required rotation */
+        }
+    
+    .menu-item .certifications {
+        transform: rotate(-154.285713deg); /* Change as per your required rotation */
+    }
+        
+    .menu-item .projects {
+        transform: rotate(-205.714284deg); /* Change as per your required rotation */
+        }
+    
+    .menu-item .contact {
+        transform: rotate(-257.142855deg); /* Change as per your required rotation */
+        }
+    
+    .menu-item .resume {
+        transform: rotate(-308.571426deg); /* Change as per your required rotation */
+        }
+    
+    
+    /* Styles for spinning effect on click */
+
+    .rotate {
+        transform: perspective(1000px) rotateY(720deg);
+    }
+    .rotate {
+        transition: transform 0.5s;
+    }
+    
+    .menu-item .rotate {
+        transform: rotateY(360deg);
+    }
+    
+    /* Additional classes for spinning effect on each menu item */
+    .about.rotate {
+        transform: rotate(0) rotateY(360deg);
+    }
+    
+    .github.rotate {
+        transform: rotate(-51.428571deg) rotateY(360deg);
+    }
+    
+    .linkedin.rotate {
+        transform: rotate(-102.85714deg) rotateY(360deg);
+    }
+    
+    .certifications.rotate {
+        transform: rotate(-154.285713deg) rotateY(360deg);
+    }
+    
+    .projects.rotate {
+        transform: rotate(-205.714284deg) rotateY(360deg);
+    }
+    
+    .contact.rotate {
+        transform: rotate(-257.142855deg) rotateY(360deg);
+    }
+    
+    .resume.rotate {
+        transform: rotate(-308.571426deg) rotateY(360deg);
+    }
+    
+
+    .menu  {
+        position: absolute ;
+        display: flex ;
+        justify-content: center ;
+        margin: auto;
+        width: 30vw ;
+        height: 30vh ;
+        padding-top: 150px !important; /* */
+        
+    }
+    /* postion of the toggler */
+    .menu-toggler {
+        padding-bottom: 150px !important;
+        /* position: sticky; */
+    }
+    /* toggle position clickable*/
+    #menu-toggler {
+        position: absolute;
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    /* location of the menu items open in relation on the screen */
+
+    .menu-item {
+        position: fixed;
+        display: flex; /*Center content horizontally*/
+        justify-content: center; /* Center content horizontally */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 20vw;
+        height: 20vh;
+        opacity: 0;
+        transition: 0.5s;
+        transform-origin: center;
+        top: 100px; /*. to move the menu itmes open down on Y axis*/
+        transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
+
+    }
+
+    .menu-item a.menu-item-index {
+        display: block;
+        width: 60px; /* Here is determined the size of the circles in the menu items up to 200px everywhere else in the css files*/
+        height: 60px;
+        line-height: 40px; /* Space between two sentences in the circle menu item*/
+        color: rgba(255, 255, 255, 0.7);
+        background: rgb(21, 35, 41);
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        font-size: 10px;
+        pointer-events: none;
+        transition: 0.2s;
+    
+        
+        /* Center the content horizontally */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 4px 4px 8px rgba(24, 33, 132, 0.5); /* Adjust the values to control the shadow effect */
+        
+    }
+
+    
+
+    .body {
+        overflow: hidden;
+    }
+}
+
+
+
+@media screen and (max-width: 373px) and (max-height: 665px){
+
+    /* Styles for smaller screens (e.g., mobile devices) */
+    .menu-toggler {
+        width: 20px; /* Reduce the width for the menu-toggler */
+        height: 20px; /* Reduce the height for the menu-toggler */
+        }
+    
+        .menu-toggler:checked ~ ul .menu-item {
+        width: 150px; /* Reduce the width of menu items */
+        height: 150px; /* Reduce the height of menu items */
+        }
+    
+    
+        /* translateY(-80) is the distance from the center */
+    
+        .menu-item a.menu-item-index {
+        width: 75px; /* Reduce the width of menu item circles */
+        height: 75px; /* Reduce the height of menu item circles */
+        font-size: 8px; /* Reduce the font size for menu item text */
+        }
+        .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+            transform: rotate(0deg) translateY(-40px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+            transform: rotate(51.428571deg) translateY(-40px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+            transform: rotate(102.85714deg) translateY(-40px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+            transform: rotate(154.285713deg) translateY(-40px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+            transform: rotate(205.714284deg) translateY(-40px) translateX(0);
+        }
+        .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+            transform: rotate(257.142855deg) translateY(-40px) translateX(0);
+        }
+    
+        .menu-toggler:checked ~ ul .menu-item:nth-child(7) {
+            transform: rotate(308.571426deg) translateY(-40px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item a {
+            pointer-events: auto;
+        }
+    
+        /* Rotation of content to become horicontal */
+    
+        .menu-item:nth-child(2) a {
+            transform: rotate(-51.428571deg) ;
+        }
+    
+        .menu-item:nth-child(3) a {
+            transform: rotate(-102.85714deg) ;
+    
+        }.menu-item:nth-child(4) a {
+            transform: rotate(-154.285713deg) ;
+        }
+    
+        .menu-item:nth-child(5) a {
+            transform: rotate(-205.714284deg) ;
+            /* z-index: 1; */
+        }
+    
+        .menu-item:nth-child(6) a {
+            transform: rotate(-257.142855deg) ;
+            /* filter: saturate(200%); */
+        }
+    
+        .menu-item:nth-child(7) a {
+            transform: rotate(-308.571426deg) ;
+            /* filter: saturate(200%); */
+        }
+    
+        /* spinning */
+    
+        .menu-item .about {
+            transform: rotate(0); /* Change as per your required rotation */
+        }
+        
+        .menu-item .github {
+        transform: rotate(-51.428571deg); /* Change as per your required rotation */
+        }
+        
+        .menu-item .linkedin {
+            transform: rotate(-102.85714deg); /* Change as per your required rotation */
+            }
+        
+        .menu-item .certifications {
+            transform: rotate(-154.285713deg); /* Change as per your required rotation */
+        }
+            
+        .menu-item .projects {
+            transform: rotate(-205.714284deg); /* Change as per your required rotation */
+            }
+        
+        .menu-item .contact {
+            transform: rotate(-257.142855deg); /* Change as per your required rotation */
+            }
+        
+        .menu-item .resume {
+            transform: rotate(-308.571426deg); /* Change as per your required rotation */
+            }
+        
+        
+        /* Styles for spinning effect on click */
+    
+        .rotate {
+            transform: perspective(1000px) rotateY(720deg);
+        }
+        .rotate {
+            transition: transform 0.5s;
+        }
+        
+        .menu-item .rotate {
+            transform: rotateY(360deg);
+        }
+        
+        /* Additional classes for spinning effect on each menu item */
+        .about.rotate {
+            transform: rotate(0) rotateY(360deg);
+        }
+        
+        .github.rotate {
+            transform: rotate(-51.428571deg) rotateY(360deg);
+        }
+        
+        .linkedin.rotate {
+            transform: rotate(-102.85714deg) rotateY(360deg);
+        }
+        
+        .certifications.rotate {
+            transform: rotate(-154.285713deg) rotateY(360deg);
+        }
+        
+        .projects.rotate {
+            transform: rotate(-205.714284deg) rotateY(360deg);
+        }
+        
+        .contact.rotate {
+            transform: rotate(-257.142855deg) rotateY(360deg);
+        }
+        
+        .resume.rotate {
+            transform: rotate(-308.571426deg) rotateY(360deg);
+        }
+        
+    
+        .menu  {
+            position: absolute ;
+            display: flex ;
+            justify-content: center ;
+            margin: auto;
+            width: 30vw ;
+            height: 30vh ;
+            padding-top: 150px !important; /* */
+            
+        }
+        /* postion of the toggler */
+        .menu-toggler {
+            padding-bottom: 150px !important;
+            /* position: sticky; */
+        }
+        /* toggle position clickable*/
+        #menu-toggler {
+            position: absolute;
+            margin-top: 10px;
+            width: 50px;
+            height: 50px;
+        }
+    
+        /* location of the menu items open in relation on the screen */
+    
+        .menu-item {
+            position: fixed;
+            display: flex; /*Center content horizontally*/
+            justify-content: center; /* Center content horizontally */
+            top: 0;
+            /* bottom: 0; */
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 20vw;
+            height: 20vh;
+            opacity: 0;
+            transition: 0.5s;
+            transform-origin: center;
+            top: 100px !important; /*. to move the menu itmes open down on Y axis*/
+            transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
+    
+        }
+    
+        .menu-item a.menu-item-index {
+            display: block;
+            width: 60px; /* Here is determined the size of the circles in the menu items up to 200px everywhere else in the css files*/
+            height: 60px;
+            line-height: 40px; /* Space between two sentences in the circle menu item*/
+            color: rgba(255, 255, 255, 0.7);
+            background: rgb(21, 35, 41);
+            border-radius: 50%;
+            text-align: center;
+            text-decoration: none;
+            font-size: 10px;
+            pointer-events: none;
+            transition: 0.2s;
+        
+            
+            /* Center the content horizontally */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 4px 4px 8px rgba(24, 33, 132, 0.5); /* Adjust the values to control the shadow effect */
+            
+        }
+    
+        
+    
+        .body {
+            overflow: hidden;
+        }
+    }
+  /* Menu.css */
+
+
+  /* height */
+@media screen and (max-height: 650px) {
+
+    .menu-item {
+        position: fixed;
+        display: flex; /*Center content horizontally*/
+        justify-content: center; /* Center content horizontally */
+        top: 0;
+        /* bottom: 0; */
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 20vw;
+        height: 20vh;
+        opacity: 0;
+        transition: 0.5s;
+        transform-origin: center;
+        top: 120px !important; /*. to move the menu itmes open down on Y axis*/
+        transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
+
+    }
+
+    .menu-toggler {
+        top: 120px !important;
+        /* position: sticky; */
+    }
+    
+    .menu  {
+        position: absolute ;
+        display: flex ;
+        justify-content: center ;
+        margin: auto;
+        width: 12vw ;
+        height: 12vh ;
+        padding-top: 100px !important; /* */
+        
+    }
+
+    .menu-toggler {
+        width: 40px; /* Reduce the width for the menu-toggler */
+        height: 40px; /* Reduce the height for the menu-toggler */
+        }
+    
+        .menu-toggler:checked ~ ul .menu-item {
+        width: 150px; /* Reduce the width of menu items */
+        height: 150px; /* Reduce the height of menu items */
+        }
+    
+    
+        /* translateY(-80) is the distance from the center */
+    
+        .menu-item a.menu-item-index {
+        width: 80px; /* Reduce the width of menu item circles */
+        height: 80px; /* Reduce the height of menu item circles */
+        font-size: 8px; /* Reduce the font size for menu item text */
+        }
+        .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+            transform: rotate(0deg) translateY(-100px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+            transform: rotate(51.428571deg) translateY(-100px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+            transform: rotate(102.85714deg) translateY(-100px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+            transform: rotate(154.285713deg) translateY(-100px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+            transform: rotate(205.714284deg) translateY(-100px) translateX(0);
+        }
+        .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+            transform: rotate(257.142855deg) translateY(-100px) translateX(0);
+        }
+    
+        .menu-toggler:checked ~ ul .menu-item:nth-child(7) {
+            transform: rotate(308.571426deg) translateY(-100px) translateX(0);
+        }
+        
+        .menu-toggler:checked ~ ul .menu-item a {
+            pointer-events: auto;
+        }
+    
+        /* Rotation of content to become horicontal */
+    
+        .menu-item:nth-child(2) a {
+            transform: rotate(-51.428571deg) ;
+        }
+    
+        .menu-item:nth-child(3) a {
+            transform: rotate(-102.85714deg) ;
+    
+        }.menu-item:nth-child(4) a {
+            transform: rotate(-154.285713deg) ;
+        }
+    
+        .menu-item:nth-child(5) a {
+            transform: rotate(-205.714284deg) ;
+            /* z-index: 1; */
+        }
+    
+        .menu-item:nth-child(6) a {
+            transform: rotate(-257.142855deg) ;
+            /* filter: saturate(200%); */
+        }
+    
+        .menu-item:nth-child(7) a {
+            transform: rotate(-308.571426deg) ;
+            /* filter: saturate(200%); */
+        }
+    
+        /* spinning */
+    
+        .menu-item .about {
+            transform: rotate(0); /* Change as per your required rotation */
+        }
+        
+        .menu-item .github {
+        transform: rotate(-51.428571deg); /* Change as per your required rotation */
+        }
+        
+        .menu-item .linkedin {
+            transform: rotate(-102.85714deg); /* Change as per your required rotation */
+            }
+        
+        .menu-item .certifications {
+            transform: rotate(-154.285713deg); /* Change as per your required rotation */
+        }
+            
+        .menu-item .projects {
+            transform: rotate(-205.714284deg); /* Change as per your required rotation */
+            }
+        
+        .menu-item .contact {
+            transform: rotate(-257.142855deg); /* Change as per your required rotation */
+            }
+        
+        .menu-item .resume {
+            transform: rotate(-308.571426deg); /* Change as per your required rotation */
+            }
+        
+        
+        /* Styles for spinning effect on click */
+    
+        .rotate {
+            transform: perspective(1000px) rotateY(720deg);
+        }
+        .rotate {
+            transition: transform 0.5s;
+        }
+        
+        .menu-item .rotate {
+            transform: rotateY(360deg);
+        }
+        
+        /* Additional classes for spinning effect on each menu item */
+        .about.rotate {
+            transform: rotate(0) rotateY(360deg);
+        }
+        
+        .github.rotate {
+            transform: rotate(-51.428571deg) rotateY(360deg);
+        }
+        
+        .linkedin.rotate {
+            transform: rotate(-102.85714deg) rotateY(360deg);
+        }
+        
+        .certifications.rotate {
+            transform: rotate(-154.285713deg) rotateY(360deg);
+        }
+        
+        .projects.rotate {
+            transform: rotate(-205.714284deg) rotateY(360deg);
+        }
+        
+        .contact.rotate {
+            transform: rotate(-257.142855deg) rotateY(360deg);
+        }
+        
+        .resume.rotate {
+            transform: rotate(-308.571426deg) rotateY(360deg);
+        }
+        
+}

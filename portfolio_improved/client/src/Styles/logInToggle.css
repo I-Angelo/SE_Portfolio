@@ -1,0 +1,144 @@
+/* On the code below for .custom-login, the only waty to be able to position the divs fpot the button on the right-upper corner was by using flex */
+
+.login-toggle {
+  position: relative;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.menu-icon {
+  position: absolute; /* Ensure the icon container is relatively positioned */
+  /* display: block; Ensure the label takes the whole space */
+  width: 70px;
+  height: 70px;
+  z-index: 39;
+  right: 7px;
+  
+
+}
+
+
+/* checkbox behind the lock picture. Move the margin to see it with display commented out. Position of it is determined by the 'custom-login' css div attrbutes or parent div in line 1 */
+.menu-checkbox {
+  position: absolute; /* Position the checkbox absolutely within the label */
+  display: block;
+  opacity: 0; /* Make the checkbox invisible but still clickable */
+  height: 50px;
+  width: 50px;
+  z-index: 50;
+  background: transparent;
+  cursor: pointer;
+  
+}
+
+.custom-icon {
+  position: relative; /* Change position to relative */
+  width: 75px;
+  overflow: hidden;
+  height: 75px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  left: 100px;
+}
+  
+.login-icon {
+    height: 75px;
+    width: 75px;
+  }
+  
+  
+  .custom-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-menu-btn:checked ~ .custom-dropdown  {
+    display: block;
+  }
+
+ /* Styles for the dropdown menu */
+.dropdown {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  top: 100%; /*Position below the parent element */
+  right: 0; /* Align to the right */
+  margin-top: 10px; /* Spacing between icon and dropdown */
+  background-color: #dfcdc3; /* Dropdown background color */
+  border: 1px solid #ccc; /* Border for dropdown */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  /* height: 50px; */
+  /* width: 50px; */
+  top: 55px;
+  right: 13px;
+  width: 50px;
+  height: 25px;
+  /* background: rgb(128, 128, 132); */
+  border-radius: 100px / 50px;
+}
+
+/* Show dropdown when open class is applied */
+.dropdown.open {
+  display: block;
+  z-index: 80;
+}
+
+/* Style the list items within the dropdown */
+.dropdown ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  right: 0;
+  text-align: center;
+  z-index: 80;
+}
+
+.dropdown ul li {
+  padding: 1px; /* Padding for each list item */
+  z-index: 80;
+}
+
+.dropdown ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Link text color */
+  font-size: 10px;
+  text-align: center;
+  z-index: 80;
+}
+
+/* Hover effect for dropdown links */
+.dropdown ul li a:hover {
+  background-color: #3941a8; /* Background color on hover */
+}
+
+  
+@media (min-width: 375px) and (max-width: 768px)  {
+
+  .login-icon {
+    height: 35px;
+    width: 35px;
+  }
+
+  .menu-icon {
+    position: absolute; /* Ensure the icon container is relatively positioned */
+    /* display: block; Ensure the label takes the whole space */
+    width: 70px;
+    height: 70px;
+    z-index: 39;
+    right: -13px;
+    top: 10px;
+    
+  
+  }
+
+
+
+
+}

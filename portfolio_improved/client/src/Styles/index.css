@@ -1,0 +1,199 @@
+/* Index.css */
+/* Reset some default browser styles */
+
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a global font family and background color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Style the root element where your React app is rendered */
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the Menu component */
+.menu {
+    position: relative;
+}
+
+.menu-toggler {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: #3c31a1;
+    border: 1px solid #8f3535;
+    border-radius: 5px;
+    padding: 10px;
+    transform-origin: top left;
+    transform: scaleY(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-item {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.menu-toggler:checked ~ ul .menu-item {
+    opacity: 1;
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+    transform: rotate(0deg) translate(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+    transform: rotate(60deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+    transform: rotate(120deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+    transform: rotate(180deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+    transform: rotate(240deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+    transform: rotate(300deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item a {
+    pointer-events: auto;
+}
+
+.menu-toggler + label {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background: rgba(230, 239, 250, 0.9);
+    transition: transform 0.5s top 0.5s;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.menu-toggler + label:before,
+.menu-toggler + label:after {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background: rgba(188, 27, 27, 0.7);
+    transition: transform 0.5s top 0.5s;
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+}
+
+.menu-toggler + label:before {
+    top: 10px;
+}
+
+.menu-toggler + label:after {
+    top: -10px;
+}
+
+.menu-item:nth-child(1) a {
+    transform: rotate(0deg);
+}
+
+.menu-item:nth-child(2) a {
+    transform: rotate(288deg);
+}
+
+.menu-item:nth-child(3) a {
+    transform: rotate(216deg);
+}
+
+.menu-item:nth-child(4) a {
+    transform: rotate(144deg);
+}
+
+.menu-item:nth-child(5) a {
+    transform: rotate(72deg);
+}
+
+/* .menu-item:nth-child(6) a {
+    transform: rotate(-300deg);
+} */
+
+.menu-item {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu-item a {
+    display: block;
+    width: 200px; /* Set the width to 200px */
+    height: 200px; /* Set the height to 200px */
+    line-height: 80px;
+    color: rgba(167, 187, 35, 0.7);
+    background: rgba(114, 149, 11, 0.7);
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.menu-item a:hover {
+    box-shadow: 0 0 0 2px rgba(154, 206, 24, 0.3);
+    color: rgb(109, 15, 99);
+    background: rgba(154, 192, 154, 0.3);
+    font-size: 44.44px;
+}
+

@@ -1,0 +1,20 @@
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Apply the animation to the favicon */
+  @-moz-document url-prefix() {
+    /* For Firefox */
+    /* Specify the animation */
+    link[rel="icon"] {
+      animation: spin 1s linear infinite;
+    }
+  }
+  
+  /* Other browsers */
+  @-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+  }
+  

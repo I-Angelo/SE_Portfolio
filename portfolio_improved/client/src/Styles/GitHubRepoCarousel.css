@@ -1,0 +1,278 @@
+/* styles.css */
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Other styles follow... */
+
+.parent-carousel-container {
+
+  display: flex;
+  flex-direction: column;
+  min-height: 35vh;
+  margin-top: 200px;
+
+}
+
+
+/* Custom styles for the GitHubRepoCarousel */
+.github-repo-slide {
+  /* background-color: #2e8aa3; */
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,58,125,0.7861519607843137) 16%, rgba(0,140,255,0.9206057422969187) 44%);
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Reduced maximum width */
+  margin: 0 auto;
+  text-align: center; /* Center-align all content horizontally */
+  
+}
+
+.title-G h1 {
+  color: rgb(12, 37, 89);
+  text-shadow: 2px 2px 4px rgb(253, 253, 253); /* Adjust the shadow values as needed */
+  font-size: 50px !important;
+  margin: 5px 5px;
+  margin-bottom: 150px !important;
+  margin-top: 100px !important;
+  padding: 5px;
+  text-align: center;
+}
+
+.github-repo-slide h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.github-repo-slide p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.github-repo-slide a {
+  color: #93619a; /* View On Github color*/
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a strong shadow */
+}
+
+.github-repo-slide a.view-on-github {
+  font-weight: bold;
+}
+
+
+.slick-track .slick-list {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+/* .mobile-view {
+  height: 10px;
+} */
+
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Style for the button container */
+.button-container {
+  margin-top: 50px; /* Add spacing between the slide and the button */
+  text-align: center; /* Center-align content */
+}
+
+/* Style for the button link */
+.home-link-button {
+  text-decoration: none; /* Remove underlines */
+  color: #2678d6; /* Link color */
+}
+
+/* Style for the button image */
+.home-link-button img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra spacing below the image */
+  margin: 0 auto; /* Center-align the image horizontally */
+}
+
+.mobile-view {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+
+.slick-slider.slick-initialized { /* MAIN SLIDE IN CENTER*/
+  max-width: 500px ;
+  /* height: 220px !important; */
+  background-color: #1d2339; /* background main slide */ 
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 0 ;
+  text-align: center; /* Center-align content */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4) !important;
+  justify-content: center  !important;
+  /* align-items: center; */
+  /* text-align: center; */
+  display: flex !important;
+}
+/* width of the carousel container */
+.slick-slider {
+  width: 50vw !important;
+  /* height: 50px; */
+}
+
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .slick-current .slickactive .slick-slide {
+  height: 500px !important;
+} */
+
+.slick-slide {
+  height: 200px !important;
+  width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.slick-list {
+  /* Center the contents horizontally */
+  text-align: center;
+  /* vertically - centered */
+  justify-content: center;
+  align-items: center;
+  /* height: 50px; */
+  
+  /* Set a fixed width and height for the container (optional) */
+  width: 400px;
+  
+}
+
+.github-repo-slide h2 {
+  font-size: 1.5rem; /* You can adjust the size as needed */
+  margin-bottom: 10px;
+}
+
+.repo-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100vh; /* Adjust the desired height as needed */
+  width: 100%; /* Take up the full width of the viewport */
+  text-align: center; /* Center-align content horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px !important;
+}
+
+@media (max-width: 768px) {
+/* 
+  .parent-carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  /* .mobile-view {
+    width: 100%; /* Make it 5% smaller */
+    /* height: 500px; 
+  } */
+
+  /* black box container */
+
+  .slick-slider.slick-initialized { /* MAIN SLIDE IN CENTER*/
+    /* max-width: 600px ; */
+    max-height: 220px !important;
+    background-color: #1d2339; /* background main slide */ 
+    border: 1px solid #ddd;
+    padding: 20px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 275px !important;
+    margin: 0 ;
+    text-align: center; /* Center-align content */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4) !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+  /* width of the carousel container */
+  .slick-slider {
+    width: 50vw !important;
+    max-height: 200px !important;
+  }
+
+
+
+  .slick-slide {
+    height: 175px !important;
+    width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+
+  .github-repo-slide {
+    /* background-color: #2e8aa3; */
+    display: flex;
+    flex-direction: column;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,58,125,0.7861519607843137) 16%, rgba(0,140,255,0.9206057422969187) 44%);
+    border: 1px solid #ddd;
+    padding: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 200px; /* Reduced maximum width */
+    margin: 0 auto;
+    text-align: center; /* Center-align all content horizontally */
+    height: 100px !important;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px !important;
+    margin-bottom: 2px !important;
+  }
+
+  a {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 10px !important;
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  /* .slick-active { */
+    /* max-height: 5px !important; */
+  /* } */
+
+  /* .slick-current { */
+    /* max-height: 5px !important; */
+  /* } */
+
+
+/* acrtive slide properties */
+  .slick-list {
+    max-height: 90px;
+    
+  }
+  
+}
+/* / */
+/* //GitHubRepoCarousel.css  */

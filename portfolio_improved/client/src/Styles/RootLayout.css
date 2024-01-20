@@ -1,0 +1,16 @@
+.mainProjectContainer{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.layout {
+
+   margin-bottom: auto;
+
+}
+
+/* .itemButton {
+
+
+} */

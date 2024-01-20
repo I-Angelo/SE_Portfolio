@@ -1,0 +1,76 @@
+/* Add this to your existing CSS file or create a new one */
+/* Add this to your existing CSS file or create a new one */
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  max-height: 100vh; /* Set a maximum height for the grid container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* flex-wrap: wrap; */
+}
+
+.refresh-button {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 20px;
+  justify-content: center;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  p {
+    color: #9d1a1a; /* Adjust the color to your preference */
+    margin: 0; /* Remove any default margin to ensure proper spacing */
+  }
+}
+
+/* Add this to your existing CSS file or create a new one */
+
+.refresh-button {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.refresh-button:hover {
+  background-color: lightgreen; /* Change color on hover */
+}
+
+.refresh-button:active {
+  background-color: red; /* Change color when pressed */
+}
+
+.grid-item button {
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.grid-item button:hover {
+  background-color: lightgreen; /* Change color on hover */
+}
+
+.grid-item button:active {
+  background-color: red; /* Change color when pressed */
+}
+

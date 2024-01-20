@@ -1,0 +1,27 @@
+.login-page {
+    margin-bottom: 100px;
+}
+
+.login-info {
+    margin-top: 50px;
+    height: 20vh;
+}
+
+.btn-login {
+    padding-bottom: 200px;
+}
+
+
+
+.login {
+    display: flex !important;
+    flex-direction: column !important;
+    /* justify-content: center !important; */
+    /* align-items: center !important; */
+    /* align-content: center !important; */
+    padding-top: 85px;
+    font-size: 25px;
+    text-align: center;
+    
+
+}

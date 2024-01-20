@@ -1,0 +1,102 @@
+/* aboutMe.css */
+
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    overflow: auto;
+}
+
+.certification-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 60vh;
+    min-width: 60vw;
+    border-radius: 15px;
+  }
+
+h1 {
+  color: rgb(12, 37, 89);
+  text-shadow: 2px 2px 4px rgb(253, 253, 253);
+  font-size: 50px ;
+}
+
+
+.certification-contentB {
+  margin-top: 100px;
+}
+
+.certification-content1 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+
+}
+
+.certification-content2 {
+  padding: 20px;
+  margin-top: 125px !important;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background-color: #266a9e;
+  text-align: justify;
+  white-space: normal; /* Allow text to wrap */
+  border-radius: 15px;
+  background: linear-gradient(to bottom, rgba(240, 240, 240, 0) 0%, rgba(240, 240, 240, 1) 100%);
+}
+
+
+
+  /* Mobile-specific styles */
+  @media (max-width: 768px),(max-height: 800px) {
+    .certification-contentB {
+      font-size: 16px;
+      padding: 10px; /* Reduce padding for smaller screens */
+      text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .certification-content1{
+        margin-top: 10px;
+    }
+
+    .certification-container {
+        margin-top: 40px;
+    }
+  
+    .button-container {
+       margin-top: 20px; /* Adjust spacing between the slide and the button */
+       margin-bottom: 75px;
+    }
+  
+ 
+    .scroll-container::-webkit-scrollbar {
+        width: 12px; /* Adjust the scrollbar width */
+      }
+      
+    .scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    }
+    
+    .scroll-container::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+    }
+      
+  }
+
+
+  

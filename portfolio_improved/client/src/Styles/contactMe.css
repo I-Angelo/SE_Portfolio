@@ -1,0 +1,251 @@
+/* contactMe.css */
+
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.contact-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+   /* Below adjust the desired height as needed */
+  min-height: 40vh;
+  padding-top: 75px;
+
+}
+
+.contact-me-content {
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust the shadow values as needed */
+  font-size: 25px;
+  margin: 5px 5px 100px 5px;
+  padding: 5px;
+}
+
+.button-container {
+  margin-top: 35px; /* Add spacing between the slide and the button */
+  text-align: center; /* Center-align content */
+  background-color: transparent;
+}
+
+.contact-form {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row; /* Display children in a row */
+  justify-content: center; /* Center the two columns */
+  align-items: stretch; /* Stretch items to full height */
+  color: aliceblue;
+}
+
+.personal-info {
+  flex: 1; /* Take up available space in the row */
+  max-width: 400px; /* Adjust the maximum width of the personal info section */
+  display: flex;
+  flex-direction: column;
+  padding: 10px; /* Add padding to labels and input fields */
+  padding-bottom: 0px;
+}
+
+.message-section {
+  flex: 1; /* Take up available space in the row */
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+/* Styles for the message input */
+.message-input {
+  width: 100%; /* Adjust the width as needed */
+  height: 160px; /* Set the height of the message input */
+  padding: 10px; /* Adjust padding as needed */
+  border: 1px solid #ccc; /* Set border properties as needed */
+  border-radius: 4px; /* Set border radius as needed */
+  outline: none; /* Remove outline */
+  margin: 0; /* Reset margin */
+}
+
+/* Additional rule for label size */
+label {
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+.padd1 {
+  margin-top: 10px;
+}
+
+.input-section {
+  margin-bottom: 7px;
+}
+
+.f2 {
+  margin-top: 0px;
+}
+
+/* Style for the submit button container */
+.submit-button-container {
+  text-align: center; /* Center-align content */
+  margin-top: 20px; /* Adjust the margin on top as needed */
+}
+
+/* Style for the submit button */
+.submit-button {
+  padding: 10px; /* Adjust padding as needed */
+  background-color: #4f7ad1; /* Change the background color to your preferred color */
+  color: white; /* Set text color to white */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Set border radius as needed */
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size as needed */
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.submit-button:hover {
+  background-color: #3ea8a2; /* Change the background color on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+.form-submit-message {
+  text-align: center;
+}
+
+
+@media (max-width: 768px), (max-height: 800px) {
+  .square-button,
+  button {
+    width: 125px; /* Adjust the width to your preference */
+    height: 50px; /* Make the height the same as the width for a square button */
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px; /* Adjust the border-radius for smooth edges */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* Add a smooth transition for the box shadow */
+    margin-top: 10px;
+    /* Cool box shadow effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .submit-button {
+    width: 125px; /* Adjust the width to your preference */
+    height: 30px; /* Make the height the same as the width for a square button */
+  }
+
+  /* -------- */
+
+  .contact-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+     /* Below adjust the desired height as needed */
+    min-height: 45vh;
+  
+  }
+  
+  .contact-me-content {
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust the shadow values as needed */
+    font-size: 15px !important;
+    margin: 5px 5px 50px 5px;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 35px !important;
+  }
+  
+  .button-container {
+    margin-top: 35px; /* Add spacing between the slide and the button */
+    text-align: center; /* Center-align content */
+    background-color: transparent;
+  }
+  
+  .contact-form {
+    max-width: 600px !important; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* Display children in a row */
+    justify-content: center; /* Center the two columns */
+    align-items: stretch; /* Stretch items to full height */
+    color: aliceblue;
+  }
+  
+  .personal-info {
+    flex: 1; /* Take up available space in the row */
+    max-width: 200px !important; /* Adjust the maximum width of the personal info section */
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Add padding to labels and input fields */
+    padding-bottom: 0px;
+  }
+  
+  .message-section {
+    flex: 1; /* Take up available space in the row */
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  
+  /* Styles for the message input */
+  .message-input {
+    width: 80%; /* Adjust the width as needed */
+    height: 160px; /* Set the height of the message input */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Set border properties as needed */
+    border-radius: 4px; /* Set border radius as needed */
+    outline: none; /* Remove outline */
+    margin: 0; /* Reset margin */
+  }
+  
+  /* Additional rule for label size */
+  label {
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  .padd1 {
+    margin-top: 10px;
+  }
+  
+  .input-section {
+    margin-bottom: 7px;
+  }
+  
+  .f2 {
+    margin-top: 0px;
+  }
+  
+  /* Style for the submit button container */
+  .submit-button-container {
+    text-align: center; /* Center-align content */
+    /* margin-top: 20px; Adjust the margin on top as needed */
+  }
+  
+  .submit-button:hover {
+    background-color: #3ea8a2; /* Change the background color on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+  }
+  
+  .form-submit-message {
+    text-align: center;
+  }
+
+  /* .button-container-B {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  } */
+}

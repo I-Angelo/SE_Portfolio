@@ -1,0 +1,177 @@
+/* projects.css or your custom CSS file for 'projects.js' */
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+.projects-container-main {
+  margin-top: 100px;
+}
+
+
+.proj-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+/* Style for the entire projects container */
+.Projects {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Set your desired background color */
+    padding: 20px;
+    border-radius: 15px;
+    position: relative; /* Add relative positioning */
+    background: linear-gradient(to bottom, rgba(240, 240, 240, 0) 0%, rgba(240, 240, 240, 1) 100%);
+    width: 60vw;
+    
+}
+
+.projects-container {
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh; /* Adjust the desired height as needed */
+    width: 100%; /* Take up the full width of the viewport */
+    text-align: center; /* Center-align content horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.title-P {
+    text-align: center; /* Center-align the text */
+    margin-top: 100px;
+  }
+
+ /* Style for each h1 within the title div , shadows*/
+.title-P h1 {
+    color: rgb(12, 37, 89);
+    text-shadow: 2px 2px 4px rgb(253, 253, 253); 
+    font-size: 35px !important;
+    padding: 5px;
+  }
+
+h1 {
+  margin-bottom: 35px;
+}
+  
+/* Style for the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a 2x2 grid */
+  gap: 25px; /* Add a 25px gap between grid items */
+}
+
+/* Style for each subsection */
+.project-subsection {
+  background-color: #e0e0e0; /* Set the background color for subsections */
+  border-radius: 4px; /* Add rounded corners */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+/* Style for the subsection title */
+.project-subsection h2 {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Style for the link */
+.project-subsection a {
+  color: #121490; /* Set link color */
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect for the link */
+.project-subsection a:hover {
+  text-decoration: underline;
+}
+
+
+.button-container {
+  margin-top: 50px; /* Add spacing between the slide and the button */
+  text-align: center; /* Center-align content */
+}
+
+/* Style for the button link */
+.home-link-button {
+  text-decoration: none; /* Remove underlines */
+  color: #2678d6; /* Link color */
+}
+
+/* Style for the button image */
+.home-link-button img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra spacing below the image */
+  margin: 0 auto; /* Center-align the image horizontally */
+}
+
+
+  /* Assign different background colors to each sub div */
+.project-subsection:nth-child(1) {
+    background-color: #60BEFF; /* Red */
+  }
+  
+.project-subsection:nth-child(2) {
+  background-color: #60BEFF; /* Green */
+}
+
+.project-subsection:nth-child(3) {
+  background-color: #60BEFF; /* Blue */
+}
+
+.project-subsection:nth-child(4) {
+  background-color: #60BEFF; /* Yellow */
+}
+
+
+@media (max-width: 768px),(max-height: 800px) {
+
+  h1 {
+    font-size: 20px !important;
+  }
+
+  .projects-container-main {
+    margin-top: 40px !important;
+  }
+  .title-P {
+    text-align: center; /* Center-align the text */
+    margin-top: 40px;
+    font-size: 20px;
+  }
+
+  .title-P h1 {
+    color: rgb(12, 37, 89);
+    text-shadow: 2px 2px 4px rgb(253, 253, 253); 
+    font-size: 20px !important;
+    padding: 5px;
+  }
+
+  .proj-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+  }
+
+  .Projects {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Set your desired background color */
+    padding: 20px;
+    border-radius: 15px;
+    position: relative; /* Add relative positioning */
+    background: linear-gradient(to bottom, rgba(240, 240, 240, 0) 0%, rgba(240, 240, 240, 1) 100%);
+    width: 60vw;
+    
+}
+
+}

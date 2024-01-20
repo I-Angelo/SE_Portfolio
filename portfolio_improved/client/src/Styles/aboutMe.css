@@ -1,0 +1,142 @@
+/* aboutMe.css */
+
+
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  margin: 0; /* Reset default body margin */
+  font-family: Arial, sans-serif; /* Example font-family */
+  /* overflow: auto !important; */
+  
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* width: 75%; */
+  padding-top: 400px; /* Adjust as needed to create space from the top */
+}
+
+.about-me-container-A {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding: 0 20px; /* Add padding to the sides */
+  width: 85%;
+  margin-top: 70px !important;
+  /* Set a maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-bottom: 200px;
+}
+.about-me-content-A {
+  padding: 20px;
+  padding-bottom: 0 !important;
+ /*margin-top: 200px; /* Adjust as needed */
+  text-align: justify;
+  line-height: 1.6; /* Adjust line height as needed */
+}
+
+.about-me-content2-A {
+  padding-top: 0 !important;
+  padding: 20px;
+  margin-top: 20px; /* Adjust as needed */
+  margin-bottom: 10px;
+  max-width: 1300px; /* Increase the maximum width as needed */
+  background-color: #266a9e;
+  text-align: justify;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.Profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 35px;
+}
+
+.selfie {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+  /* Picture */
+  .Profile-pic-A {
+    width: 175px ;
+    height: 175px;
+    border-radius: 50%;
+    margin-top: 50px ;
+    text-align: center;
+    background-color: transparent;
+  }
+  
+  .selfie {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 768px),(max-height: 800px) {
+    .about-me-content {
+      height: 75px;
+      font-size: 16px;
+      padding: 10px; /* Reduce padding for smaller screens */
+      text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .main-container{
+        margin-top: 400px !important;
+    }
+
+    .about-me-container {
+        margin-top: 200px;
+    }
+  
+    .button-container {
+       margin-top: 20px; /* Adjust spacing between the slide and the button */
+       margin-bottom: 75px;
+    }
+  
+    .Profile-pic.profile {
+      width: 150px; /* Reduce the width for smaller screens */
+      height: 150px; /* Reduce the height for smaller screens */
+    }
+    .Profile-pic-A {
+      width: 75px ;
+      height: 75px;
+      border-radius: 50%;
+      margin-top: 3px ;
+      text-align: center;
+      background-color: transparent;
+    }
+
+    .about-me-container-A { 
+      margin-bottom: 100px;
+    }
+  
+
+   
+  }
+
+
+  

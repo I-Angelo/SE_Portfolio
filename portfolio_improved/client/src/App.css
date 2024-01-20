@@ -1,0 +1,70 @@
+/* app.css */
+body, html {
+    margin: 0;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+    /* background: no-repeat; */
+  }
+
+  
+  
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 120px;
+    width: 100%;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: 100% 1100px;
+    background-position: center; /* Center the background image */
+    z-index: -1;
+  }
+
+@media (max-width: 780px) {
+    .background {
+        height: 900px; /* Adjust the height as needed */
+        width: 100%; /* Adjust the width to maintain aspect ratio */
+       
+    }
+
+}
+
+
+
+
+
+
+
+  /* color: rgb(47, 119, 164); */
+
+
+
+  /*. 
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./static/Firefly\ isometric\,\ digital\ art\ \,\ chunky\,\ wobble\ smooth\ man\ thinking\ standing\ in\ front\ of\ a\ big\ scree.jpg');
+    background-repeat: no-repeat;
+     /* color: rgb(47, 119, 164); 
+     background-size: cover; 
+     z-index: -1;
+   }
+   
+   .App {
+      color: rgb(136, 22, 81);
+     
+   }
+   
+  
+  */
