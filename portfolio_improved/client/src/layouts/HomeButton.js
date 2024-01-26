@@ -20,12 +20,12 @@ function HomeButton () {
         
         <motion.div initial={exitAnimation} animate={enterAnimation} exit={exitAnimation}>
         <div className="button-container-B pulsate-menu-image">
-        <Link to="/" className="home-link-button-B">
-          <div className="button-content">
-            <img src={workstation} alt="workstation" className="button-image" />
-            <span>Go Back to Work Station</span>
-          </div>
-        </Link>
+          <Link to="/" className="home-link-button-B">
+            <div className="button-content">
+              <img src={workstation} alt="workstation" className="button-image"/>
+              <span>Go Back to Work Station</span>
+            </div>
+          </Link>
         </div>
         </motion.div>
         

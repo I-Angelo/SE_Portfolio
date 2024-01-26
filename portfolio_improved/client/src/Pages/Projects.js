@@ -22,11 +22,6 @@ function Projects() {
         >
             <ProjectsTitle/>
             <div className='projects-container-main'>
-                {/* <div className='title-P'>
-                    <h1>Projects completed</h1>
-                    <h1>and</h1>
-                    <h1>in development</h1>
-                </div> */}
                 < div className="proj-container">
                     <div className="Projects background-fade">
                         <div className="grid-container">

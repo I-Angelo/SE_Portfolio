@@ -23,12 +23,10 @@ function AboutMe() {
 
       
           <motion.div initial={exitAnimation} animate={enterAnimation} exit={exitAnimation}>
-            {/* <body> */}
+        
             <AboutMeTitle/>
 
           <div className="about-me-container-A">
-
-              {/* <AboutMeTitle/> */}
            
             <div className="about-me-content2-A">
              
@@ -40,8 +38,7 @@ function AboutMe() {
             </div>
             <div className="Profile-pic-A">
                 <img src={profile} alt="Profile" className="selfie" />
-  
-              </div>
+            </div>
           </div>
           {/* </body> */}
           </motion.div>

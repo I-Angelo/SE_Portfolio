@@ -437,6 +437,51 @@ a {
       height: 13vh; /* Reduce the height of menu items */
     }
 
+    /* ICONS MENU */
+        #about-me-icon {
+            height: 50px;
+            width: 50px;
+        }
+
+        #about-me-icon::before{
+            content: '';
+        }
+
+        #about-me-icon::after{
+            content: 'About Me';
+        }
+
+        #gitHub-icon {
+            height: 50px;
+            width: 50px;
+        }
+
+        #certifications-icon {
+            height: 50px;
+            width: 50px;
+        }
+
+        #cv-icon {
+            height: 50px;
+            width: 50px;
+        }
+
+        #linkedin-icon {
+            height: 50px;
+            width: 50px;
+        }
+
+        #projects-icon {
+            height: 50px;
+            width: 50px;
+        }
+
+        #contactme-icon {
+            height: 50px;
+            width: 50px;
+    }
+
+
     .pulsate-menu-image {
         animation: pulse 2s infinite; /* Adjust the duration as needed */
       }
@@ -875,6 +920,51 @@ a {
         overflow: hidden;
     }
 
+    /* ICONS MENU */
+#about-me-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#about-me-icon::before{
+    content: '';
+}
+
+#about-me-icon::after{
+    content: 'About Me';
+}
+
+#gitHub-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#certifications-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#cv-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#linkedin-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#projects-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#contactme-icon {
+    height: 40px;
+    width: 40px;
+}
+
+
 
 }
 
@@ -1104,6 +1194,50 @@ a {
     .body {
         overflow: hidden;
     }
+
+     /* ICONS MENU */
+#about-me-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#about-me-icon::before{
+    content: '';
+}
+
+#about-me-icon::after{
+    content: 'About Me';
+}
+
+#gitHub-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#certifications-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#cv-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#linkedin-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#projects-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#contactme-icon {
+    height: 40px;
+    width: 40px;
+}
 }
 
 
@@ -1333,6 +1467,50 @@ a {
     .body {
         overflow: hidden;
     }
+
+     /* ICONS MENU */
+#about-me-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#about-me-icon::before{
+    content: '';
+}
+
+#about-me-icon::after{
+    content: 'About Me';
+}
+
+#gitHub-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#certifications-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#cv-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#linkedin-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#projects-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#contactme-icon {
+    height: 40px;
+    width: 40px;
+}
 }
 
 
@@ -1563,6 +1741,50 @@ a {
         .body {
             overflow: hidden;
         }
+
+         /* ICONS MENU */
+#about-me-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#about-me-icon::before{
+    content: '';
+}
+
+#about-me-icon::after{
+    content: 'About Me';
+}
+
+#gitHub-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#certifications-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#cv-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#linkedin-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#projects-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#contactme-icon {
+    height: 40px;
+    width: 40px;
+}
     }
   /* Menu.css */
 
@@ -1606,6 +1828,11 @@ a {
         top: -5px !important; /*. to move the menu itmes open down on Y axis*/
         transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
 
+
+        
     }
+
+    
+
 
 }

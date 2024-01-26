@@ -41,9 +41,7 @@ function ContactMe() {
           <ContactMeTitle/>
 
         <div className="contact-me-container"> 
-          {/* <div className="contact-me-content">
-            <h1>Contact Me</h1>
-          </div> */}
+         
           <div>
             <form className="contact-form" id='a-form' onSubmit={submitHandler}>
               <div className="personal-info">
