@@ -210,13 +210,18 @@ body {
 
 /* CIRCLES SIZE - color */
 
+.about-me-img {
+    height: 50px;
+    width: 50px;
+}
+
 .menu-item a.menu-item-index {
     display: block;
     width: 125px; /* Here is determined the size of the circles in the menu items up to 200px everywhere else in the css files*/
     height: 125px;
     line-height: 40px; /* Space between two sentences in the circle menu item*/
-    color: rgba(255, 255, 255, 0.7);
-    background: rgb(21, 35, 41);
+    /* color: rgba(255, 255, 255, 0.7); */
+    /* background: rgb(21, 35, 41); */
     border-radius: 50%;
     text-align: center;
     text-decoration: none;
@@ -231,6 +236,50 @@ body {
     align-items: center;
     text-shadow: 4px 4px 8px rgba(24, 33, 132, 0.5); /* Adjust the values to control the shadow effect */
     
+}
+
+/* ICONS MENU */
+#about-me-icon {
+    height: 100px;
+    width: 100px;
+}
+
+#about-me-icon::before{
+    content: '';
+}
+
+#about-me-icon::after{
+    content: 'About Me';
+}
+
+#gitHub-icon {
+    height: 100px;
+    width: 100px;
+}
+
+#certifications-icon {
+    height: 100px;
+    width: 100px;
+}
+
+#cv-icon {
+    height: 100px;
+    width: 100px;
+}
+
+#linkedin-icon {
+    height: 100px;
+    width: 100px;
+}
+
+#projects-icon {
+    height: 80px;
+    width: 100px;
+}
+
+#contactme-icon {
+    height: 80px;
+    width: 100px;
 }
 
   
@@ -376,7 +425,7 @@ a {
 
 /* screens upt 768px */
 
-@media (min-width: 375px) and (max-width: 768px)  {
+@media (min-width: 375px) and (max-width: 850px)  {
     /* Styles for smaller screens (e.g., mobile devices) */
     .menu-toggler {
       width: 30px; /* Reduce the width for the menu-toggler */
@@ -384,8 +433,8 @@ a {
     }
   
     .menu-toggler:checked ~ ul .menu-item {
-      width: 15vw; /* Reduce the width of menu items */
-      height: 15vh; /* Reduce the height of menu items */
+      width: 18vw; /* Reduce the width of menu items */
+      height: 13vh; /* Reduce the height of menu items */
     }
 
     .pulsate-menu-image {
@@ -404,7 +453,10 @@ a {
         }
       }
 
-    
+      .about-me-icon {
+        height: 50px;
+        width: 50px;
+    }
 
   
     /* translateY(-80) is the distance from the center */
@@ -554,18 +606,18 @@ a {
         margin: auto;
         width: 20vw ;
         height: 11vh ;
-        padding-bottom: 65px; /* */
+        padding-bottom: 0px; /* */
         
     }
     /* postion of the toggler */
-    .menu-toggler {
-        padding-top: 0px;
+    /* .menu-toggler { */
+        /* padding-top: 10px; */
         /* position: sticky; */
-    }
+    /* } */
     /* toggle position clickable*/
     #menu-toggler {
         position: absolute;
-        margin-top: 50px; /*. position of the transparent toggler */
+        margin-top: 15px; /*. position of the transparent toggler */
         width: 50px;
         height: 50px;
     }
@@ -586,7 +638,7 @@ a {
         opacity: 0;
         transition: 0.5s;
         transform-origin: center;
-        bottom: 60px; /*. to move the menu itmes open down on Y axis*/
+        bottom: 0px; /*. to move the menu itmes open down on Y axis*/
         transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
 
     }
@@ -600,7 +652,7 @@ a {
 
 /* smaller screens */
 
-@media screen and (max-width: 375px) {
+@media (max-width: 375px) {
     /* Styles for smaller screens (e.g., mobile devices) */
     .menu-toggler {
         width: 2vw; /* Reduce the width for the menu-toggler */
@@ -764,14 +816,11 @@ a {
         
     }
     /* postion of the toggler */
-    .menu-toggler {
-        padding-bottom: 100px;
-        /* position: sticky; */
-    }
+    
     /* toggle position clickable*/
     #menu-toggler {
         position: absolute;
-        margin-bottom: 100px;
+        margin-bottom: 0px;
         width: 50px;
         height: 50px;
     }
@@ -1058,7 +1107,7 @@ a {
 }
 
 
-@media (max-width: 374px) and (max-height: 667px){
+@media (width: 376px) and (max-height: 667px){
 
 /* Styles for smaller screens (e.g., mobile devices) */
 .menu-toggler {
@@ -1218,7 +1267,7 @@ a {
         justify-content: center ;
         margin: auto;
         width: 30vw ;
-        height: 30vh ;
+        height: 10vh !important;
         padding-top: 150px !important; /* */
         
     }
@@ -1288,7 +1337,7 @@ a {
 
 
 
-@media screen and (max-width: 373px) and (max-height: 665px){
+@media screen and (width: 375px) and (max-height: 665px){
 
     /* Styles for smaller screens (e.g., mobile devices) */
     .menu-toggler {
@@ -1448,7 +1497,7 @@ a {
             justify-content: center ;
             margin: auto;
             width: 30vw ;
-            height: 30vh ;
+            height: 10vh ;
             padding-top: 150px !important; /* */
             
         }
@@ -1519,7 +1568,26 @@ a {
 
 
   /* height */
-@media screen and (max-height: 650px) {
+
+  @media (max-width: 375px) {
+
+    .menu  {
+        position: absolute ;
+        display: flex ;
+        justify-content: center ;
+        margin: auto;
+        width: 30vw ;
+        height: 10vh ;
+        padding-top: 50px !important; /* */
+  }
+
+
+    #menu-toggler {
+        position: relative;
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+    }
 
     .menu-item {
         position: fixed;
@@ -1535,175 +1603,9 @@ a {
         opacity: 0;
         transition: 0.5s;
         transform-origin: center;
-        top: 120px !important; /*. to move the menu itmes open down on Y axis*/
+        top: -5px !important; /*. to move the menu itmes open down on Y axis*/
         transform: rotate(-15deg); /*Adjust the initial rotation angle as needed*/
 
     }
 
-    .menu-toggler {
-        top: 120px !important;
-        /* position: sticky; */
-    }
-    
-    .menu  {
-        position: absolute ;
-        display: flex ;
-        justify-content: center ;
-        margin: auto;
-        width: 12vw ;
-        height: 12vh ;
-        padding-top: 100px !important; /* */
-        
-    }
-
-    .menu-toggler {
-        width: 40px; /* Reduce the width for the menu-toggler */
-        height: 40px; /* Reduce the height for the menu-toggler */
-        }
-    
-        .menu-toggler:checked ~ ul .menu-item {
-        width: 150px; /* Reduce the width of menu items */
-        height: 150px; /* Reduce the height of menu items */
-        }
-    
-    
-        /* translateY(-80) is the distance from the center */
-    
-        .menu-item a.menu-item-index {
-        width: 80px; /* Reduce the width of menu item circles */
-        height: 80px; /* Reduce the height of menu item circles */
-        font-size: 8px; /* Reduce the font size for menu item text */
-        }
-        .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
-            transform: rotate(0deg) translateY(-100px) translateX(0);
-        }
-        
-        .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
-            transform: rotate(51.428571deg) translateY(-100px) translateX(0);
-        }
-        
-        .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
-            transform: rotate(102.85714deg) translateY(-100px) translateX(0);
-        }
-        
-        .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
-            transform: rotate(154.285713deg) translateY(-100px) translateX(0);
-        }
-        
-        .menu-toggler:checked ~ ul .menu-item:nth-child(5) {
-            transform: rotate(205.714284deg) translateY(-100px) translateX(0);
-        }
-        .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
-            transform: rotate(257.142855deg) translateY(-100px) translateX(0);
-        }
-    
-        .menu-toggler:checked ~ ul .menu-item:nth-child(7) {
-            transform: rotate(308.571426deg) translateY(-100px) translateX(0);
-        }
-        
-        .menu-toggler:checked ~ ul .menu-item a {
-            pointer-events: auto;
-        }
-    
-        /* Rotation of content to become horicontal */
-    
-        .menu-item:nth-child(2) a {
-            transform: rotate(-51.428571deg) ;
-        }
-    
-        .menu-item:nth-child(3) a {
-            transform: rotate(-102.85714deg) ;
-    
-        }.menu-item:nth-child(4) a {
-            transform: rotate(-154.285713deg) ;
-        }
-    
-        .menu-item:nth-child(5) a {
-            transform: rotate(-205.714284deg) ;
-            /* z-index: 1; */
-        }
-    
-        .menu-item:nth-child(6) a {
-            transform: rotate(-257.142855deg) ;
-            /* filter: saturate(200%); */
-        }
-    
-        .menu-item:nth-child(7) a {
-            transform: rotate(-308.571426deg) ;
-            /* filter: saturate(200%); */
-        }
-    
-        /* spinning */
-    
-        .menu-item .about {
-            transform: rotate(0); /* Change as per your required rotation */
-        }
-        
-        .menu-item .github {
-        transform: rotate(-51.428571deg); /* Change as per your required rotation */
-        }
-        
-        .menu-item .linkedin {
-            transform: rotate(-102.85714deg); /* Change as per your required rotation */
-            }
-        
-        .menu-item .certifications {
-            transform: rotate(-154.285713deg); /* Change as per your required rotation */
-        }
-            
-        .menu-item .projects {
-            transform: rotate(-205.714284deg); /* Change as per your required rotation */
-            }
-        
-        .menu-item .contact {
-            transform: rotate(-257.142855deg); /* Change as per your required rotation */
-            }
-        
-        .menu-item .resume {
-            transform: rotate(-308.571426deg); /* Change as per your required rotation */
-            }
-        
-        
-        /* Styles for spinning effect on click */
-    
-        .rotate {
-            transform: perspective(1000px) rotateY(720deg);
-        }
-        .rotate {
-            transition: transform 0.5s;
-        }
-        
-        .menu-item .rotate {
-            transform: rotateY(360deg);
-        }
-        
-        /* Additional classes for spinning effect on each menu item */
-        .about.rotate {
-            transform: rotate(0) rotateY(360deg);
-        }
-        
-        .github.rotate {
-            transform: rotate(-51.428571deg) rotateY(360deg);
-        }
-        
-        .linkedin.rotate {
-            transform: rotate(-102.85714deg) rotateY(360deg);
-        }
-        
-        .certifications.rotate {
-            transform: rotate(-154.285713deg) rotateY(360deg);
-        }
-        
-        .projects.rotate {
-            transform: rotate(-205.714284deg) rotateY(360deg);
-        }
-        
-        .contact.rotate {
-            transform: rotate(-257.142855deg) rotateY(360deg);
-        }
-        
-        .resume.rotate {
-            transform: rotate(-308.571426deg) rotateY(360deg);
-        }
-        
 }

@@ -142,3 +142,26 @@
 
 
 }
+
+@media (max-width: 375px) {
+    
+  .login-icon {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    /*position: absolute; /* Ensure the icon container is relatively positioned */
+    /* display: block; Ensure the label takes the whole space */
+    width: 70px;
+    height: 70px;
+    z-index: 39;
+    right: -20px;
+    top: 10px;
+    
+  
+  }
+}

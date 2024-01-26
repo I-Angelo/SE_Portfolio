@@ -19,16 +19,16 @@ const IsometricImages = ({ children }) => {
 
     <div className="grid-containerIso">
         <div className="grid-itemIso">
-            <div className="Image1">{children}</div>
+            <div className="Image1"></div>
         </div>
-        <div className="grid-itemIso2">{children}
-            <div className="Image2">{children}</div>
+        <div className="grid-itemIso2">
+            <div className="Image2"></div>
         </div>
-      <div className="grid-itemIso3">{children}
-        <div className="Image3">{children}</div>
+      <div className="grid-itemIso3">
+        <div className="Image3"></div>
       </div>
-      <div className="grid-itemIso4">{children}
-        <div className="Image4">{children}</div>
+      <div className="grid-itemIso4">
+        <div className="Image4"></div>
       </div>
     </div>
     </motion.div>

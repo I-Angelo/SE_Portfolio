@@ -16,9 +16,8 @@ p {
   align-items: center;
   margin-top: 100px;
    /* Below adjust the desired height as needed */
-  min-height: 40vh;
+  height: 40vh;
   padding-top: 75px;
-
 }
 
 .contact-me-content {
@@ -151,7 +150,7 @@ label {
     align-items: center;
     margin-top: 40px;
      /* Below adjust the desired height as needed */
-    min-height: 45vh;
+    height: 40vh;
   
   }
   
