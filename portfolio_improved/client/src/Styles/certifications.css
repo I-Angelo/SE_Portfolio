@@ -74,7 +74,16 @@ h1 {
     }
 
     .certification-container {
-        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        height: 40vh;
+        padding-top: 75px;
+        min-width: 60vw;
+        border-radius: 15px;
+      
+      
     }
   
     .button-container {

@@ -140,7 +140,7 @@ h1 {
 }
 
 
-@media (max-width: 768px),(max-height: 800px) {
+@media screen and (max-width: 768px) {
 
   h1 {
     font-size: 20px !important;
@@ -167,6 +167,7 @@ h1 {
     justify-content: center;
     text-align: center;
     padding-top: 15px;
+    margin-top: 0px;
   }
 
   .Projects {

@@ -73,7 +73,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 100px;
+      margin-top: 0px;
       height: 40vh;
       padding-top: 75px;
     } 
@@ -83,7 +83,7 @@ body {
       padding: 20px;
       margin-top: 20px; /* Adjust as needed */
       margin-bottom: 10px;
-      max-width: 30vh; /* Increase the maximum width as needed */
+      max-width: 45vh; /* Increase the maximum width as needed */
       background-color: #465460;
       text-align: justify;
       border-radius: 15px;
