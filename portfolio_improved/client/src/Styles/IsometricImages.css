@@ -12,7 +12,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid #ccc; */
     opacity: 1; /* Set opacity to 1 to display the images */
     z-index: 0;
 }
@@ -27,13 +26,19 @@
     padding-top: 300px;
     padding-right: 5px;
 
+    filter: grayscale(0%);
+    transition: filter 0.5s;
+
+}
+
+.Image1:hover {
+  filter: grayscale(100%);
 }
 
 .grid-itemIso2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid #ccc; */
     opacity: 1; /* Set opacity to 1 to display the images */
     z-index: 0;
 }
@@ -48,16 +53,21 @@
     padding-top: 300px;
     padding-left: 5px;
 
+    filter: grayscale(0%);
+    transition: filter 0.5s;
+
+}
+
+.Image2:hover {
+  filter: grayscale(100%);
 }
 
 .grid-itemIso3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid #ccc; */
     opacity: 1; /* Set opacity to 1 to display the images */
     z-index: 0;
-    /* border-radius: 50%; */
 }
 
 .Image3 {
@@ -69,15 +79,20 @@
     background-position: left top 70px !important;
     padding-bottom: 300px;
     padding-left: 5px;
-    /* border-radius: 50%; */
 
+    filter: grayscale(0%);
+    transition: filter 0.5s;
+
+}
+
+.Image3:hover {
+  filter: grayscale(100%);
 }
 
 .grid-itemIso4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid #ccc; */
     opacity: 1; /* Set opacity to 1 to display the images */
     z-index: 0;
 }
@@ -91,8 +106,13 @@
     background-position: right top 70px !important;
     padding-bottom: 300px;
     padding-left: 5px;
-    /* border-radius: 50%; */
 
+    filter: grayscale(0%);
+    transition: filter 0.5s;
+}
+
+.Image4:hover {
+  filter: grayscale(100%);
 }
     
 @media (min-width: 375px) and (max-width: 858px) {
@@ -110,7 +130,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* border: 1px solid #ccc; */
         opacity: 1; /* Set opacity to 1 to display the images */
         z-index: 0;
         /* height: 50%; */
@@ -132,10 +151,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* border: 1px solid #ccc; */
         opacity: 1; /* Set opacity to 1 to display the images */
         z-index: 0;
-        /* height: 50%; */
     }
       
     .Image2 {
@@ -154,11 +171,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* border: 1px solid #ccc; */
         opacity: 1; /* Set opacity to 1 to display the images */
         z-index: 0;
-        /* border-radius: 50%; */
-        /* height: 50%; */
     }
     
     .Image3 {
@@ -170,8 +184,6 @@
         background-position: center top 100px !important;
         padding-bottom: 300px;
         padding-left: 3px;
-        /* padding-right: 10px; */
-        /* border-radius: 50%; */
     
     }
     
@@ -179,10 +191,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* border: 1px solid #ccc; */
         opacity: 1; /* Set opacity to 1 to display the images */
         z-index: 0;
-        /* height: 50%; */
     }
     
     .Image4 {
@@ -194,8 +204,6 @@
         background-position: center top 100px !important;
         padding-bottom: 300px;
         padding-left: 4px;
-        /* border-radius: 50%; */
-    
     }
 
   }
@@ -214,7 +222,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      /* border: 1px solid #ccc; */
       opacity: 1; /* Set opacity to 1 to display the images */
       z-index: 0;
     }
